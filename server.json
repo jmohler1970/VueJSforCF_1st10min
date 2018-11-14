@@ -1,11 +1,11 @@
 {
-	"name":"First10_01",
-	"app":{
-	    "cfengine":"adobe@2018"
-	},
-	"web":{
-	    "http":{
-		   "port":8080
-	    }
-	}
- }
+    "name":"VueJSFirst10_01",
+    "app":{
+        "cfengine":"adobe@2018"
+    },
+    "web":{
+        "http":{
+            "port":8080
+        }
+    }
+}
