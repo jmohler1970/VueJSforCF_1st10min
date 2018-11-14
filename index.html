@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<title>VueJS for ColdFusion devopers</title>
+	</head>
+<body>
+
+<div id="app">
+	<p>{{ count }}</p>
+	<p>
+		<button class="btn btn-primary" @click="increment">+</button>
+		<button class="btn btn-primary" @click="decrement">-</button>
+	</p>
+
+
+	<form>
+		<div class="form-group">
+			<label>Email address</label>
+			<input type="email" class="form-control" v-model="myform.email" placeholder="Enter email" />
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" class="form-control" v-model="myform.password" placeholder="Enter password" />
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+	{{ myform }}
+</div>
+
+
+
+<script>
+const store = new Vuex.Store({
+	state: {
+		count: 0
+		},
+	mutations: {
+		increment: state => state.count++,
+		decrement: state => state.count--
+	}
+})
+
+
+new Vue({
+	el: '#app',
+	
+	data : { myform : {email : "", password : ""}},
+
+	computed: {
+		count () {
+		return store.state.count
+		}
+	},
+	
+	methods: {
+		increment () {
+			store.commit('increment')
+		},
+		decrement () {
+			store.commit('decrement')
+		}
+	}
+});
+</script>
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vuex"></script>
+  </body>
+</html>	
