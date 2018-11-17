@@ -94,7 +94,7 @@ Line 38 looks simple. It is just like count on line 19. But it is much more powe
 
 This is our up/down counter again. First don't worry about the `const` on 44, the data can change, the structure of the data cannot. If bringing in vuex is the equivalent to enabling `session` variables, `new Vuex.Store` is equivalent to creating an object and tying it to a session variable. State is a member variable. It is more or less like using `this.` keyword. `mutations` are the member functions. 
 
-Why do they use the terms: `Store`, `state` and `mutations`? It is because we are going to interact with them in a sepcial way. 
+Why do they use the terms: `Store`, `state` and `mutations`? It is because we are going to interact with them in a special way. 
 
 ## Let's move on to the next part.
 
@@ -115,12 +115,12 @@ Let's do this part by part.
 
 `computed` is really special. Functions within computed look like data. In fact they are derived from the data in the application. But here is the thing they values are automatically updated as needed. Line 19: does not look like a function call. Rather than being updated by a function called, it was automatically updated because the underlying data changed. There is no loop running in the backgroud. It is if it was a magic variable that has the right value.
 
-`methods` are just regular functions within out object. These methods are interacting with the Vuex data. They are not interacting with the data withing `Vue`
+`methods` are just regular functions within object. These methods are interacting with the Vuex data. They are not interacting with the data withing `Vue`
 
 Remember how I was talking about how VueJS is tightly scoped, BUT Vuex was a way to get around that? Let's to back to where the `mutations` are used. They are are part of the `@click` on the buttons. We didn't say `store.increment()` with parenthesis. We didn't say `Vuex.increment` with parenthesis either. We just used its name and VueJS method then called a `mutation`.
 
+## Let's see this in action.
 
-# Let's see this in action.
 
 
 # Next steps
@@ -135,3 +135,6 @@ If you found this interesting, go see my Landing page video. It has ColdFusion, 
 - https://angularjs.org/
 
 - https://angular.io/
+
+- https://github.com/jmohler1970/VueJSforCF_1st10min
+
