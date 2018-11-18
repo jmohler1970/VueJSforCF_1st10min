@@ -130,6 +130,8 @@ If you found this interesting, go see my Landing page video. It has ColdFusion, 
 
 # Resources
 
+- https://vuejs.org/v2/guide/installation.html
+
 - https://github.com/vuejs/vuex/tree/dev/examples/counter
 
 - https://angularjs.org/
